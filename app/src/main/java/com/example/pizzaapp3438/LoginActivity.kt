@@ -3,15 +3,17 @@ package com.example.pizzaapp3438
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : AppCompatActivity() {
-    companion object{
-        var name = "Nelsom Raymond"
-        var email = "nelsonraymon@students.amikom.ac.id"
+    companion object {
+        var name = "Nelson Raymond"
+        var email = "nelsonraymond@students.amikom.ac.id"
         var password = "nelson123"
         var level = "CEO"
     }
@@ -25,10 +27,23 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //login validation -> if true call activity Account
+        val txtUsername: EditText = findViewById(R.id.editTextText3)
+        val txtPassword: EditText = findViewById(R.id.editTextText4)
         val btnLogin: Button = findViewById(R.id.buttonLogin)
         btnLogin.setOnClickListener {
-            val intentAccount = Intent(this, AccountActivity::class.java)
-            startActivity(intentAccount)
+            if (txtUsername.text.toString().equals(email) &&
+                txtPassword.text.toString().equals(password)
+            ) {
+                val intent = Intent(this, AccountActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(
+                    this,
+                    "Login failed, Check your email and password",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 }

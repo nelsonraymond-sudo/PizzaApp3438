@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         // instance
         val btnNext: Button = findViewById(R.id.buttonNext)
         btnNext.setOnClickListener {
