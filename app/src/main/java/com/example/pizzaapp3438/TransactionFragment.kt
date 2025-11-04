@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +30,24 @@ class TransactionFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //add data to RecyclerView
+        val rvTrx: RecyclerView = view.findViewById(R.id.recyclerViewOrder)
+        rvTrx.apply {
+            layoutManager = LinearLayoutManager(activity)
+            val order = ArrayList<TransactionModel>()
+            order.add(TransactionModel( "Vegetarian Pizza",  80000, 1,
+            R.drawable.logo_pizza))
+            order.add(TransactionModel( "Hawaiian Pizza", 85000,  1,
+            R.drawable.logo_pizza))
+            order.add(TransactionModel( "American Pizza", 90000,  1,
+            R.drawable.logo_pizza))
 
+            val adapter = AdapterTransaction(order)
+            rvTrx.adapter = adapter
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
