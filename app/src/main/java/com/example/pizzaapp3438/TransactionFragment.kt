@@ -44,7 +44,7 @@ class TransactionFragment : Fragment() {
             order.add(TransactionModel( "American Pizza", 90000,  1,
             R.drawable.logo_pizza))
 
-            val adapter = AdapterTransaction(order)
+            val adapter = AdapterTransaction()
             rvTrx.adapter = adapter
         }
     }

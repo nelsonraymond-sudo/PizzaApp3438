@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewProfile1" />
 
     <EditText
-        android:id="@+id/editTextName1"
+        android:id="@+id/txtNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -54,10 +54,10 @@
         android:textSize="16dp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="@+id/textViewName1"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNama" />
 
     <EditText
-        android:id="@+id/editTextEmail1"
+        android:id="@+id/txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -78,10 +78,10 @@
         android:textSize="16dp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="@+id/textViewEmail1"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
-        android:id="@+id/editTextPassword1"
+        android:id="@+id/txtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -102,10 +102,10 @@
         android:textSize="16dp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="@+id/textViewPassword1"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
     <EditText
-        android:id="@+id/editTextLevel1"
+        android:id="@+id/txtLevel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -132,7 +132,7 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLevel1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLevel" />
 
     <TextView
         android:id="@+id/text_about_developer1"
